@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Line.h"
 
-@interface DrawView : UIView
+@interface DrawView : UIView <UIGestureRecognizerDelegate>
 @property (nonatomic) NSMutableDictionary *currentLines;
 @property (nonatomic) NSMutableArray *finishedLines;
+@property (nonatomic, weak) Line *selectedLine;
+@property (nonatomic) UIPanGestureRecognizer *moveRecognizer;
 @end
